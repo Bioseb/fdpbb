@@ -1,0 +1,67 @@
+/**
+ * Hoot Admin Shortcodes
+ * ========================================================
+ */
+
+/*** Button ***/
+#hoot-insert-shortcode {}
+.hoot-sc-generator-button {}
+
+/*** Wrapper ***/
+#hoot-sc-generator-wrap { display: none; }
+#hoot-sc-generator { background: #fff; }
+body.hoot-mfp-shown .mfp-bg { z-index: 101000; }
+body.hoot-mfp-shown .mfp-wrap { z-index: 101001; }
+
+/*** Layout ***/
+.mfp-content { height: 100%; }
+#hoot-sc-generator { position: relative; width: 85%; max-width: 900px; height: 85%; /* max-height: 550px; */ margin: 30px auto; background: #fff; -webkit-box-shadow: 0 2px 25px #000; -moz-box-shadow: 0 2px 25px #000; box-shadow: 0 2px 25px #000; -webkit-transition: max-width .2s; -moz-transition: max-width .2s; transition: max-width .2s; }
+#hoot-sc-generator .separator { height: 0; margin: 12px 20px; padding: 0; border-top: 1px solid #ddd; }
+
+/*** Menu ***/
+.hoot-sc-generator-menu { background: #f3f3f3; border-right: solid 1px #ccc; width: 200px; position: absolute; top: 0; left: 0; height: 100%; box-sizing: border-box; }
+.hoot-sc-generator-menu h4 { font-size: 1em; margin: 0; padding: 18px 12px; border-bottom: 1px solid #ddd; }
+.hoot-sc-generator-list { overflow: hidden; position: absolute; top: 0; height: 100%; width: 100%; padding-top: 55px; box-sizing: border-box; }
+.hoot-sc-generator-list ul { margin: 0; height: 100%; overflow: auto; padding: 10px 0; box-sizing: border-box; }
+.hoot-sc-generator-list li { margin-bottom: 0; }
+.hoot-sc-generator-list li.subhead { font-weight: bold; padding: 6px 12px; }
+.hoot-sc-generator-list li a { padding: 6px 20px; margin: 0; line-height: 18px; font-size: 14px; display: block; text-decoration: none; }
+.hoot-sc-generator-list li a:focus { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.hoot-sc-generator-list li a.current,
+.hoot-sc-generator-list li a:hover { background: #e6e6e6; background: rgba( 0, 0, 0, 0.04 ); }
+
+/*** Content ***/
+.hoot-sc-generator-content-wrap { margin-left: 200px; height: 100%; box-sizing: border-box; padding: 10px 20px 60px; }
+.hoot-sc-generator-content { overflow: auto; height: 100%; position: relative; }
+.hoot-sc-generator-content h2 { margin: 0; padding: 10px 0 16px; border-bottom: solid 1px #eee; }
+.hoot-sc-generator-content-inner { padding: 1px 15px 1px 1px; position: absolute; top: 50px; bottom: 5px; overflow: auto; width: 100%; box-sizing: border-box; }
+.hoot-sc-section { display: none; }
+.hoot-sc-section:first-child { display: block; }
+
+/*** Hootoptions Override ***/
+.hoot-sc-generator-content .hootoptions .section { padding: 5px 0 30px; }
+.hoot-sc-generator-content .hootoptions .section:last-child { border-bottom: none; }
+.hoot-sc-generator-content .hootoptions .heading { margin: 1.33em 0; }
+.hoot-sc-generator-content .hootoptions .section .controls { float: none; width: auto; }
+.hoot-sc-generator-content .hootoptions .section .explain { float: none; max-width: none; padding-right: 15px; }
+.hoot-sc-generator-content .hootoptions .hoot-of-group .section { padding: 0 14px }
+
+/*** Footer Toolbar ***/
+.hoot-sc-generator-toolbar { border-top: 1px solid #ddd; position: absolute; bottom: 0; right: 0; left: 200px; height: 60px; box-sizing: border-box; }
+.button.hoot-sc-generator-insert { float: right; margin: 15px 15px 0 10px; }
+
+@media only screen and (max-width: 900px) {
+	#hoot-sc-generator { height: auto; max-height: none; }
+
+	.hoot-sc-generator-menu { width: 100%; position: relative; height: auto; }
+	.hoot-sc-generator-menu h4 { padding: 10px 15px; }
+	.hoot-sc-generator-list { position: relative; padding: 10px 15px; height: auto; }
+	.hoot-sc-generator-list ul { padding: 0; }
+	.hoot-sc-generator-list li { display: inline-block; }
+	.hoot-sc-generator-list li a { display: inline-block; padding: 5px 0; margin-right: 12px; text-decoration: underline; }
+
+	.hoot-sc-generator-content-wrap { margin-left: 0; height: auto; padding: 10px 15px 0; }
+	.hoot-sc-generator-content-inner { position: relative; top: auto; bottom: auto; overflow: visible; padding: 1px 0; }
+
+	.hoot-sc-generator-toolbar { position: relative; top: auto; left: auto; bottom: auto; right: auto; }
+}

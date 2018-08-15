@@ -1,0 +1,184 @@
+/**
+ * Main #Content for Index (Archive / Blog List)
+ * ========================================================
+ */
+
+
+// Common styles for Post Page (single) and single Post in an Archive list is in content.less
+/** Use 'entry-grid' classes to style posts in archive lists specifically **/
+
+
+/************* Archive List Post Entry *************/
+
+/*** Common Styles ***/
+
+.entry-grid-featured-img {
+	position: relative;
+	z-index: 1;
+}
+
+/* Sticky */
+.entry-sticky-tag { display: none; /*Hide it when not actually displayed as 'stuck' at top*/ }
+.sticky .entry-sticky-tag {
+	display: inline-block;
+	padding: 5px 10px;
+	margin-right: 15px;
+	text-transform: uppercase;
+	.small-font();
+	text-align: center;
+}
+
+/* Entry Grid */
+.entry-grid {
+	margin-bottom: @bigVerticalMargin * 2;
+	padding-bottom: @bigVerticalMargin;
+	min-width: inherit;
+	border: solid 1px @bgHighlightToneColor;
+	.box-shadow( 5px 5px 0 0 @bgHighlightColor );
+}
+.entry-grid-side { }
+.entry-grid-content {
+	.entry-title { font-size: @h3FontSize; }
+	.entry-title a { color: inherit; }
+}
+
+/* List Entry Byline */
+.entry-grid {
+	.entry-byline {
+		display: inline;
+		color: @baseFontColor * 2;
+		.small-font();
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.entry-byline-block {
+		padding: 0 15px 0 0;
+		margin-right: 15px;
+	}
+	.entry-byline-block a { color: @baseFontColor * 2; }
+}
+
+/*** Archive Big Post entry ***/
+
+.archive-big{ }
+
+/*** Archive Medium and Small Post entry ***/
+
+.archive-medium, .archive-small {
+	.entry-grid-content {
+		padding: @bigVerticalMargin;
+		padding-bottom: 0;
+	}
+	.entry-content-featured-img { margin-right: @bigVerticalMargin; }
+	.entry-title { margin-top: 0; }
+	.entry-byline { overflow: hidden; }
+}
+
+/*** Archive Mosaic (2/3/4 columns) Post entry ***/
+
+.archive-mosaic {
+	text-align: center;
+
+	/* Entry Grid */
+	.entry-grid { padding-bottom: 0; }
+	.entry-content-featured-img { }
+	.entry-grid-content {
+		padding: @bigVerticalMargin;
+		padding-bottom: 0;
+	}
+	.entry-title {
+		margin-top: 0;
+		font-size: @h6FontSize;
+	}
+	.entry-summary {
+		font-size: 0.9em;
+		p:first-child { margin-top: 0; }
+	}
+
+	/* Sub Content */
+	.mosaic-sub {
+		background: @bgHighlightColor;
+		border-top: solid 1px @bgHighlightToneColor;
+		margin: 0 -@bigVerticalMargin;
+		padding: 10px;
+		line-height: 1.4em;
+	}
+
+	/* Sticky */
+	&.sticky .entry-sticky-tag {
+		margin-right: 5px;
+		padding: 2px 5px;
+	}
+
+	/* List Entry Byline */
+	.entry-byline-block {
+		display: inline;
+		margin: 5px 5px 5px 0;
+		padding-right: 5px;
+	}
+	.entry-byline-block:last-child {
+		padding-right: 0;
+		margin-right: 0;
+	}
+
+}
+
+.archive-mosaic2 {}
+.archive-mosaic3 {}
+.archive-mosaic4 {}
+
+/*** Responsive Archive List Post Entry ***/
+
+@media only screen and (max-width: @breakPoint) {
+
+	/** Common **/
+	.entry-grid {
+		/* List Entry Byline */
+		.entry-byline-block {
+			margin-right: 8px;
+			padding-right: 8px;
+		}
+		.entry-sticky-tag { margin-right: 8px; }
+	}
+
+	/** Archive Big **/
+	.archive-big { }
+
+	/** Archive Medium/Small **/
+	.archive-medium, .archive-small {
+		.entry-content-featured-img {
+			margin: 0 auto @bigVerticalMargin;
+			float: none;
+		}
+	}
+
+	/** Archive Mosaic **/
+	.archive-mosaic {
+		/* Featured Image */
+		.entry-content-featured-img { padding: 20px 20px 0; }
+	}
+
+}
+
+
+/************* Read More *************/
+
+.more-link {
+	display: block;
+	margin-top: @verticalMargin;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+/************* Navigation *************/
+
+.pagination.loop-pagination { margin: @verticalMargin 0; }
+.page-numbers {
+	border: solid 1px;
+	padding: 2px 5px;
+	margin: 2px;
+}
+.page-numbers.current { }
+.page-numbers.next { }
+.page-numbers.prev { }

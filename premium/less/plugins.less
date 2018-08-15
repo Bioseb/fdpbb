@@ -1,0 +1,223 @@
+/**
+ * Theme and WordPress Plugins
+ * ========================================================
+ */
+
+
+/************* Light Slider *************/
+
+.lSSlideOuter { position: relative; }
+.lightSlider {
+	height: 0; overflow: hidden; /* To prevent F.O.U.C. */
+	.transition( height 0.8s linear; );
+}
+ul.lightSlider, #page-wrapper ul.lightSlider {
+	margin: 0;
+	list-style: none;
+}
+.lSAction > a {
+	background-image: url('images/controls.png');
+	.opacity(100);
+	z-index: 998;
+	background-repeat: no-repeat;
+}
+#page-wrapper .lSSlideOuter ul.lSPager {
+	margin: 0;
+	margin-top: 0 !important;
+	list-style: none outside none;
+}
+#page-wrapper .lSSlideOuter .lSPager.lSpg > li {
+	padding: 2px 5px;
+	display: inline-block;
+}
+#page-wrapper .lSSlideOuter .lSPager.lSpg > li a {
+	width: 25px;
+	height: 10px;
+	border-radius: 0;
+}
+.lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a { background-color: @accentColor; }
+
+/*** Responsive Light Slider ***/
+
+@media only screen and (max-width: @breakPoint) {
+	#page-wrapper .lSSlideOuter .lSPager.lSpg > li { padding: 10px 10px 0 10px; }
+	#page-wrapper .lSSlideOuter .lSPager.lSpg > li a {
+		width: 30px;
+		height: 15px;
+		border-radius: 0;
+	}
+}
+
+/************* Light Gallery *************/
+
+// #lg-slider .lg-slide { background-image: url(images/loading.gif); }
+// .customHtml {
+// 	background-color: rgba(0, 0, 0, 0.65);
+// 	height: auto;
+// 	padding: 10px 0;
+// 	position: absolute;
+// 	top: 0;
+// 	width: 100%;
+// }
+.customHtml > h4,
+.customHtml p {
+	color: #ffffff;
+	font-size: 15px;
+	line-height: 1.4285em;
+	margin: 3px 0;
+}
+.customHtml > h4 { font-size: 20px; }
+
+/************* Contact Form 7 *************/
+
+.hoot-cf7-style {
+	div.wpcf7-validation-errors,
+	div.wpcf7-mail-sent-ng,
+	div.wpcf7-mail-sent-ok {
+		margin: -@smallVerticalMargin 0 @verticalMargin;
+		border: 0;
+	}
+	div.wpcf7-validation-errors {
+		background: #fae9bf;
+		color: #807000;
+	}
+	div.wpcf7-mail-sent-ng {
+		background: #faece8;
+		color: #af2c20;
+	}
+	div.wpcf7-mail-sent-ok {
+		background: #eefae8;
+		color: #769754;
+	}
+}
+
+/************* MapPress Google Maps *************/
+
+.hoot-mapp-style {
+	.mapp-layout {
+		border: none;
+		max-width: 100%;
+		margin: 0;
+	}
+	.mapp-map-links { border: none; }
+	.mapp-links a:first-child:after { content: " /"; }
+	/* Use default styles in mappress.css for rest */
+}
+
+/************* Woocommerce *************/
+
+.woocommerce ul.products,
+.woocommerce-page ul.products,
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product { .box-sizing( border-box ); }
+// only on shop page
+.woocommerce.archive ul.products,
+.woocommerce-page.archive ul.products { margin: @verticalMargin 0 0 0; }
+.woocommerce.archive ul.products li.product,
+.woocommerce-page.archive ul.products li.product { margin: 0 3.8% 2.992em 0; padding-top: 0; }
+.woocommerce.archive ul.products li.last,
+.woocommerce-page.archive ul.products li.last { margin-right: 0; }
+
+/* Remove title from product page since we already have it in theme title area (loop-meta) */
+// .woocommerce.singular .product .product_title { display: none; }
+
+/* Singular Product */
+.upsells.products, .related.products { clear:both; }
+
+/* Woocommerce Boxcontent plugin */
+.woocommerce-boxcontent {
+	position: relative;
+	margin: 1em 0;
+	.box-sizing( border-box );
+	ul.products { list-style: none; position: relative; top: -1em; }
+	ul.products li.product { width: 48.1%; }
+}
+
+.entry-content.wc-tab { border: none; .box-shadow(none); }
+
+/* Pages - Account, Cart, Checkout */
+.woocommerce-account, .woocommerce-cart, .woocommerce-checkout {
+	.entry-content { border-bottom: none; }
+	#comments-template { display: none; }
+	.sharedaddy { display: none; }
+}
+
+/* Misc */
+.flex-viewport figure { max-width: none; } // Product Gallery Flex Slider
+
+/*** Responsive Woocommerce ***/
+
+/* Use 768px instead of @breakPoint to stay compatible with default woocommerce stylesheet */
+@media only screen and (max-width: 768px) {
+	.woocommerce.archive.plural ul.products li.product, .woocommerce-page.archive.plural ul.products li.product {
+		// Copied from woocommerce stylesheet
+		width: 48%;
+		margin: 0 0 2.992em;
+	}
+	.woocommerce-boxcontent {
+		ul.products { top: 0; }
+		ul.products li.product { width: 100%; }
+	}
+}
+
+/************* Jetpack *************/
+
+/*** Infinite Scoll ***/
+
+.infinite-scroll .hoot-jetpack-style .pagination.loop-pagination,
+.infinite-scroll .hoot-jetpack-style .pagination.navigation { display: none; }
+.hoot-jetpack-style {
+	#infinite-handle { clear: both; }
+	#infinite-handle span {
+		button { text-transform: uppercase; }
+		padding: 10px 35px 11px;
+		font-size: 1em;
+		line-height: 1.4em;
+		border: solid 1px rgba(0,0,0,0.15);
+		.box-shadow( inset 0 -3px 0 0 rgba(0,0,0,0.33); );
+	}
+}
+/* Disable for woocommerce shop/archive */
+.infinite-scroll.woocommerce #infinite-handle { display: none; }
+
+/*** Share ***/
+
+.hoot-jetpack-style {
+	.entry-content .sharedaddy {
+		padding-top: 1.2em; // 1.71428571em
+	}
+	.widgetized-template-area .entry-content .sharedaddy { // Page content on Widgetized Template
+		display: none;
+	}
+	.sharedaddy .sd-title {
+		font-family: inherit;
+		text-transform: uppercase;
+		&:before { display: none; }
+	}
+	.sd-content ul li {
+		display: inline-block;
+		iframe { margin: 0; }
+	}
+}
+/* Disable for content block widget */
+.content-block-text .sharedaddy { display: none; }
+
+/************* Page Builder *************/
+
+.so-panel {
+	&.widget { margin-top: 0; }
+	.content-blocks-widget { margin: 0; }
+	.topborder-shadow, .topborder-line {
+		.content-blocks-widget { margin-top: 3em; }
+	}
+	.bottomborder-shadow, .bottomborder-line {
+		.content-blocks-widget { margin-bottom: 3em; }
+	}
+}
+
+
+/************* Elementor *************/
+.elementor p,
+.elementor h1, .elementor h2, .elementor h3, .elementor h4, .elementor h5, .elementor h6, .elementor h.title {
+	margin-top: 0;
+}

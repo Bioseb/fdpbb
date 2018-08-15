@@ -1,0 +1,37 @@
+/************* Sticky Header *************/
+
+@keyframes hootstickyheader {
+	0%   { transform: translate(0, -100%); }
+	100% { transform: translate(0, 0); }
+}
+
+.sticky-wrapper {}
+#header.stuck {}
+@media only screen and (min-width: @breakPointUpper) {
+	.site-stretch .sticky-wrapper #header { width: 100%; }
+	#header.stuck {
+		position: fixed;
+		top: 0;
+		z-index: 1010; // 1040,1050 for lightbox
+		animation-name: hootstickyheader;
+		animation-duration: 1s;
+		#site-logo-text { margin:0; }
+		#site-logo #site-title { font-size: 35px; }
+		.site-logo-with-icon #site-title { padding-left: 32px; }
+		.site-logo-with-icon #site-title i { font-size: 32px; }
+		#site-description { display: none; font-size: 13px; }
+		.site-logo-with-icon #site-description { margin-left: 32px; }
+		#site-logo-text, #site-title, #site-description,
+		#site-title a, #site-title i {
+			.transition( margin 0.2s linear, font-size 0.2s linear, line-height 0.2s linear, padding 0.2s linear; );
+		}
+		.branding img {
+			max-height: 60px;
+			width: auto;
+			.transition( max-height 0.2s linear; );
+		}
+	}
+}
+@media (max-width: @breakPoint) {
+	.sticky-wrapper { height: auto !important; }
+}

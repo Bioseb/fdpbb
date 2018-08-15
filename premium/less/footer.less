@@ -1,0 +1,53 @@
+/**
+ * Footer
+ * ========================================================
+ */
+
+
+/************* Sub Footer *************/
+
+#sub-footer {
+	background: @bgHighlightColor;
+	border-top: solid 1px @bgHighlightToneColor;
+	padding: 10px 0;
+	text-align: center;
+}
+#sub-footer .widget-title { }
+
+
+/************* Footer *************/
+
+.footer {
+	//background: @bgHighlightToneColor + #0d0d0d;
+	//border-top: solid 1px @bgHighlightToneColor;
+	//border-bottom: solid 1px @bgHighlightToneColor - #0b0b0b;
+	padding: 20px 0 25px;
+	line-height: @baseLineHeight; // reset line height for custom font size via admin panel
+	a:not(input):not(.button) { text-decoration: underline; }
+	a:hover:not(input):not(.button) { }
+	.footer-column {}
+	.hgrid-span-12.footer-column { text-align: center; }
+	.widget { margin: @widgetMargin - 20 0; }
+	.widget-title {
+		font-size: @baseFontSize;
+		font-family: inherit;
+		font-weight: bold;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: @verticalMargin;
+	}
+}
+
+
+/************* Post Footer *************/
+
+#post-footer {
+	//background: @bgHighlightToneColor + #0d0d0d;
+	border-top: solid 1px rgba(255,255,255,0.25);
+	text-align: center;
+	padding: 18px 0;
+	font-style: italic;
+	font-family: @altFontFamily;
+	color: @contrastFontColor - #666;
+}
+#post-footer a { color: @contrastFontColor - #888; }

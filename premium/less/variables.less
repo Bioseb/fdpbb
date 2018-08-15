@@ -1,0 +1,90 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Grays - For brevity, do not use these outside this file
+// --------------------------------------------------
+@black:					#000;
+@grayDarkest:			#222;
+@grayDarker:			#444;
+@grayDark:				#666;
+@gray:					#888;
+@grayLight:				#aaa;
+@grayLighter:			#ddd;
+@grayLightest:			#eee;
+@whiteHighlight:		#f1f1f1;
+@white:					#fff;
+
+
+// GRID
+// --------------------------------------------------
+@hgridMaxWidth:				1260px;
+@hgridMinWidth:				320px;
+@hgridSpans:				12;
+@hgridSpanWidth:			percentage(1/@hgridSpans);
+@hgridSpanGutter:			30px;
+@hgridSpanSmallGutter:		20px;
+@hgridSpanResponsiveGutter:	15px;
+
+
+// Typography
+// --------------------------------------------------
+@sansFontFamily:	"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:	Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:	Monaco, Menlo, Consolas, "Courier New", monospace;
+@displayFontFamily:	"Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@baseFontFamily:	@sansFontFamily;
+@baseFontColor:		@grayDarker;
+@baseFontSize:		14px;
+@baseFontSizeSmall:	unit( ( @baseFontSize - 2 ) / @baseFontSize, em); // {12px} Minus 2px to fontsize & return in em
+@baseFontSizeBig:	unit( ( @baseFontSize + 1 ) / @baseFontSize, em); // {15px} Add 1px to fontsize & return in em
+@baseLineHeight:	unit( ( @baseFontSize + 14 ) / @baseFontSize, em); // {28px} Add 14px to fontsize & return in em
+@altFontFamily:		@serifFontFamily;
+
+@headingsFontFamily:@displayFontFamily;
+@headingsColor:		@black;
+@headingsLineHeight:1.33333333em;
+@headingsFontWeight:normal;
+@headingsMargins:	25px 0 15px;
+@h1FontSize:		unit( ( @baseFontSize + 16 ) / @baseFontSize, em); // {30px} Add 16px to fontsize & return in em
+@h2FontSize:		unit( ( @baseFontSize + 12 ) / @baseFontSize, em); // {26px} Add 12px to fontsize & return in em
+@h3FontSize:		unit( ( @baseFontSize + 10 ) / @baseFontSize, em); // {24px} Add 10px to fontsize & return in em
+@h4FontSize:		unit( ( @baseFontSize + 8 ) / @baseFontSize, em); // {22px} Add 8px to fontsize & return in em
+@h5FontSize:		unit( ( @baseFontSize + 6 ) / @baseFontSize, em); // {20px} Add 6px to fontsize & return in em
+@h6FontSize:		unit( ( @baseFontSize + 4 ) / @baseFontSize, em); // {18px} Add 4px to fontsize & return in em
+
+
+// Backgrounds and Colors
+// --------------------------------------------------
+@bodyBackground:		@white;
+@accentColor:			#48ab79;
+@accentFontColor:		#ffffff;
+@bgHighlightColor:		@whiteHighlight; // Used for highlighting backgrounds
+@bgHighlightToneColor:	@grayLighter; // Used for borders, font backgrounds etc.
+@contrastColor:			@black; // Used throughout for contrasting backgrounds
+@contrastFontColor:		@white; // Font color on Contrast color
+
+
+// Margins
+// --------------------------------------------------
+@smallVerticalMargin:	unit( ( @baseFontSize - 4 ) / @baseFontSize, em); //{10px} Minus 4px to fontsize & return in em
+@verticalMargin:		unit( ( @baseFontSize + 1 ) / @baseFontSize, em); //{15px} Add 1px to fontsize & return in em
+@bigVerticalMargin:		unit( ( @baseFontSize + 10 ) / @baseFontSize, em);//{24px} Add 10px to fontsize & return in em
+@widgetMargin:			70px;
+@sidebarWidgetMargin:	60px;
+
+
+// Forms
+// --------------------------------------------------
+@formHighlightColor:	@grayLighter;
+@formFontColor:			@grayDark;
+@formFieldColor:		@white;
+
+
+// RESPONSIVE
+// --------------------------------------------------
+@breakPoint:			799px; // Using 799/800 instead of 767/768 to show responsive on tablet portraits as well. 800 is the next good break point (portrait width for some tabs like Samsung Galaxy and Nexus)
+@breakPointUpper:		800px; // Cannot use @breakPoint + 1 as that wont render inside a media query
+@higherBreakPoint:		1023px;

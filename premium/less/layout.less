@@ -1,0 +1,18 @@
+/**
+ * Layout
+ * ========================================================
+ */
+
+body { background: @bodyBackground; }
+@media screen and (max-width: 600px) {
+	body.logged-in.admin-bar { position: static; }
+}
+
+#page-wrapper {
+	// background: @bodyBackground; // should be transparent for stretched layout
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	border-top: solid 4px @accentColor;
+}
+#topbar, #below-header, #sub-footer, #footer { overflow: hidden; }

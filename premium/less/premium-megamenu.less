@@ -1,0 +1,15 @@
+/************* Megamenu *************/
+
+.site-header .hoot-megamenu-icon {
+	font-size: 1.361111 * @baseFontSizeSmall; // Get @baseFontSize back from @baseFontSizeSmall i.e. fontsize of menuitems
+	margin-right: 5px;
+	line-height: 10px; /* prevents icon lineheight to surpass menu item lineheight */
+}
+// #menu-primary-items > li .hoot-megamenu-icon { color: inherit; }
+.site-header .sub-menu .hoot-megamenu-icon { color: inherit; }
+
+/*** Responsive Megamenu ***/
+
+@media only screen and (max-width: @breakPoint) {
+	.site-header li .hoot-megamenu-icon { color: inherit; }
+}

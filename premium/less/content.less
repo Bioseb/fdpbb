@@ -1,0 +1,312 @@
+/**
+ * Main #Content
+ * ========================================================
+ */
+
+// Use 'entry-content' classes to style posts on single post pages specifically
+
+#main.main {
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+
+
+/************* Loop Meta *************/
+
+#loop-meta {
+	background: @bgHighlightColor;
+	position: relative;
+}
+.loop-meta {
+	float: none;
+	text-align: center;
+	background-size: contain;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.loop-title {
+	font-size: @h3FontSize;
+	margin: 0;
+	text-transform: uppercase;
+}
+.loop-description { }
+.loop-description p { margin: @smallVerticalMargin 0; }
+.loop-description p:first-child { margin-top: 0.2em; }
+
+#custom-content-title-area { text-align: center; }
+.pre-content-title-area {
+	ul.lSPager { display: none; }
+}
+.post-content-title-area {}
+.content-title-area-stretch {
+	.hgrid-span-12 { padding: 0; }
+}
+.content-title-area-grid { margin: @verticalMargin 0; }
+.content .post-content-title-area { margin: 0 0 @verticalMargin; }
+
+
+/************* Entry Meta Byline (Singular Post Page) *************/
+
+.entry-byline { margin: 15px 0 5px; }
+.entry-byline-block {
+	display: inline;
+	margin: 4px 0;
+	padding: 0 15px;
+	border-right: solid 1px @baseFontColor * 2;
+	line-height: 1.1em;
+}
+.entry-byline-block:first-child { padding-left: 0; }
+.entry-byline-block:last-child {
+	border-right: none;
+	padding-right: 0;
+}
+.entry-byline a { color: @baseFontColor; }
+.entry-byline a:hover {
+	color: @baseFontColor;
+	text-decoration: underline;
+}
+.entry-byline-label { margin-right: 3px; }
+.entry-byline-author { }
+.entry-byline-date { }
+.entry-byline-cats { }
+.entry-byline-tags { }
+.entry-byline-comments { }
+
+.entry-footer {
+	div.entry-byline { background: none; }
+	.entry-byline { margin: 0; }
+	.entry-byline-block {
+		padding: 0 10px 0 0;
+		margin-right: 10px;
+	}
+}
+
+
+/************* <main> #content *************/
+
+#content { margin-top: @widgetMargin; }
+#content.no-sidebar {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.content.layout-wide-left,
+.content.layout-narrow-left { float: right; }
+.sidebar.layout-wide-left,
+.sidebar.layout-narrow-left {}
+@media only screen and (max-width: @breakPoint) {
+	.content.layout-wide-left,
+	.content.layout-narrow-left { float: none; }
+}
+
+
+/************* Single Post (Single post on Archive page / Singular Post page) *************/
+/** Caution: Modify this CSS block carefully as these divs display differently in above two templates. **/
+/** Use specific classes instead: 'entry-content' classes for single post pages, and 'entry-grid' classes to style posts in archive lists **/
+
+.entry { }
+.entry-header { }
+.entry-title { }
+.entry-content-featured-img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+/************* Single Post (Single Post Page) *************/
+
+.entry-content {
+	border: solid 1px @bgHighlightToneColor;
+	.box-shadow( 5px 5px 0 0 @bgHighlightColor );
+}
+.entry-content.no-shadow {
+	border: none;
+	.box-shadow( none );
+}
+.entry-the-content {
+	margin: 30px 35px;
+	p:first-child, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child { margin-top: 0; }
+	.clearfix();
+	//p { .clearfix(); }
+}
+.entry-footer { }
+
+/*** Responsive Singular Entry ***/
+
+@media only screen and (max-width: @breakPoint) {
+	.entry-the-content { margin: 20px; }
+}
+
+
+/************* Post Navigation *************/
+
+.entry-footer { margin-top: @bigVerticalMargin; }
+.page-links {
+	text-align: center;
+	margin: @bigVerticalMargin 0;
+}
+.page-links a, .page-links .page-numbers {
+	border: solid 1px;
+	padding: 2px 5px;
+	margin: 2px;
+}
+.loop-nav { margin-top: @bigVerticalMargin; }
+.loop-nav .prev { }
+.loop-nav .next { }
+
+
+/************* Comments *************/
+
+#comments-template {
+	border-top: solid 1px @bgHighlightToneColor;
+	margin-top: @bigVerticalMargin;
+	padding-top: @bigVerticalMargin;
+}
+#comments { }
+#comments-number {
+	font-size: @baseFontSize;
+	font-family: inherit;
+	font-weight: bold;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+#comments .comment-list, #comments .comment-list ol.children {
+	list-style-type: none;
+	margin: 0;
+}
+.comment-list { padding-bottom: @smallVerticalMargin; }
+
+/*** Single Comment ***/
+
+.comment {
+	position: relative;
+	margin: 0;
+}
+.comment article { position: relative; }
+.comment p { margin: 0 0 0.3em; }
+.comment li.comment {
+	border-left: solid 1px @bgHighlightToneColor;
+	padding-left: 40px;
+	margin-left: 20px;
+}
+.comment-avatar {
+	position: absolute;
+	width: 50px;
+	top: 5px;
+	left: 5px;
+}
+.comment-by-author {
+	.small-font();
+	color: @baseFontColor * 2;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 3px;
+}
+.comment-content-wrap { margin: 30px 0px 20px 70px; }
+.comment-meta { }
+.comment-meta-block, .comment-edit-link {
+	display: inline-block;
+	padding: 0 15px 0 0;
+	margin: 0 15px 0 0;
+	border-right: solid 1px @baseFontColor * 2;
+	.small-font();
+	color: @baseFontColor * 2;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.comment-meta-block:last-child {
+	border-right: none;
+	padding-right: 0;
+	margin-right: 0;
+}
+.comment-meta-block cite.comment-author {
+	font-style: normal;
+	font-size: 1em;
+}
+
+/*** Single Comment by post author ***/
+
+.comment.bypostauthor > article {
+	background: @bgHighlightColor;
+}
+.comment.bypostauthor > article .comment-avatar {
+	top: 15px;
+	left: 15px;
+}
+.comment.bypostauthor > article .comment-content-wrap {
+	margin-left: 80px;
+	padding: 10px 10px 10px 5px;
+}
+.comment.bypostauthor + #respond {
+	background: @bgHighlightColor;
+	padding: 20px 20px 1px;
+}
+.comment.bypostauthor + #respond #reply-title { margin-top: 0; }
+
+/*** Single Comment Ping ***/
+
+.comment-ping {
+	border: solid 1px @bgHighlightToneColor;
+	padding: 5px 10px 5px 15px;
+	margin: 30px 0px 20px;
+}
+.comment-ping cite { font-size: 1em; }
+
+/*** Response Form ***/
+
+#reply-title {
+	font-size: @baseFontSize;
+	font-family: inherit;
+	font-weight: bold;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+#reply-title small { display: block; }
+#respond label {
+	.small-font();
+	padding: @smallVerticalMargin 0;
+	color: @baseFontColor * 2;
+	width: 15%;
+	vertical-align: top;
+}
+#respond input[type=checkbox] + label {
+	display: inline;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+
+/*** Comments Responsive ***/
+
+@media only screen and (max-width: @breakPoint) {
+	.comment article { margin: 10px 0; }
+	.comment-avatar {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	.comment-content-wrap { margin: 10px 0 0 0; }
+	.comment.bypostauthor > article .comment-content-wrap { margin: 10px 0 0 10px; }
+	.comment li {
+		padding-left: 15px;
+		margin-left: 10px;
+	}
+}
+
+
+/************* 404 Page Content *************/
+
+.custom-404-content .entry-the-content { width: auto; }
+
+
+/************* Attachment Page Content *************/
+
+.entry.attachment .entry-the-content {
+	width: auto;
+	text-align: center;
+	p:first-of-type {
+		margin-top: 2em;
+		font-weight: bold;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+}

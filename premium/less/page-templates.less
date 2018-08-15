@@ -1,0 +1,55 @@
+/**
+ * Page Templates
+ * ========================================================
+ */
+
+.page-template-template-widgetized #main.main { padding-bottom: 0; }
+#content.content-template-widgetized.no-sidebar { margin-top: 0; }
+.has-sidebar .widgetized-template-area {
+	&.module-bg-highlight,
+	&.module-bg-image { padding-left: @hgridSpanSmallGutter; padding-right: @hgridSpanSmallGutter; }
+	& > .hgrid > .hgrid-span-12 { padding: 0; }
+}
+
+
+/************* Widgetized Template - Widget Areas *************/
+
+#widgetized-template-area_a, #widgetized-template-area_b, #widgetized-template-area_c, #widgetized-template-area_d, #widgetized-template-area_e {}
+.widgetized-template-area {}
+.widgetized-template-area.area-highlight { background: @bgHighlightColor; }
+// .widgetized-template-area > .hgrid > [class*="hgrid-span-"] > .widget:last-child { margin-bottom: 0; }
+// .module-bg-image , .module-bg-highlight { margin-top: @widgetMargin - 20; padding-bottom: @widgetMargin - 20; }
+
+
+/************* Widgetized Template - Sliders *************/
+
+.widgetized-template-slider.hgrid-stretch > .hgrid-span-12 { padding: 0; }
+.wt-slider.lightSlider {
+	// border-top: solid 1px #ddd;
+	// border-bottom: solid 1px #ddd;
+}
+
+/*** HTML Slider ***/
+
+#widgetized-template-html-slider { }
+#widgetized-template-html-slider:first-child .widgetized-template-slider.hgrid .lSSlideOuter { margin-top: @hgridSpanGutter; }
+
+/*** Image Slider ***/
+
+#widgetized-template-img-slider { }
+#widgetized-template-img-slider:first-child .widgetized-template-slider.hgrid .lSSlideOuter { margin-top: @hgridSpanGutter; }
+
+
+/************* Widgetized Template - Page Content *************/
+
+#widgetized-template-page-content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	p:last-child { margin-bottom: 0; }
+	.entry-footer { display: none; }
+}
+
+
+/************* Widgetized Template - Blog *************/
+
+#widgetized-template-blog { margin: 2em 0; }
